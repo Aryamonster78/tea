@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gajadhar & Son Company | Premium Tea from Rajasthan</title>
+<meta name="description" content="Gajadhar & Son Company — premium Assam, Darjeeling, Masala, Ginger and Green tea from Rajasthan, India. Rich aroma, consistent taste, trusted service. WhatsApp us for enquiries.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍃</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest:  { DEFAULT:'#14301F', 800:'#1B3B27' },
+          leaf:    { DEFAULT:'#3F6B4A', 600:'#345A3D', 100:'#E4EDE3' },
+          cream:   { DEFAULT:'#F6EFE0', 200:'#FBF7EE' },
+          gold:    { DEFAULT:'#B8863B', 600:'#9C7130' },
+          ink:     '#2A2620',
+        },
+        fontFamily: {
+          serif: ['Fraunces','serif'],
+          sans: ['Inter','sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root{ box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+  html{ scroll-behavior:smooth; scroll-padding-top:88px; }
+  body{ background:#FBF7EE; color:#2A2620; }
+  .leaf-divider{ position:relative; }
+  .leaf-divider svg{ display:block; width:100%; height:auto; }
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .step-line{ background:repeating-linear-gradient(to right, #B8863B 0 8px, transparent 8px 16px); }
+  @media (prefers-reduced-motion: reduce){ .reveal{ transition:none; opacity:1; transform:none; } html{scroll-behavior:auto;} }
+  ::selection{ background:#B8863B; color:#fff; }
+  .pulse-dot::before{ content:''; position:absolute; inset:0; border-radius:9999px; background:#25D366; opacity:.6; animation:pulse 2s infinite; }
+  @keyframes pulse{ 0%{transform:scale(1); opacity:.55;} 70%{transform:scale(1.9); opacity:0;} 100%{opacity:0;} }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="fixed top-0 inset-x-0 z-50 transition-colors duration-300" style="padding-top:env(safe-area-inset-top,0px)">
+  <div class="bg-cream-200/95 backdrop-blur border-b border-leaf-100">
+    <nav class="max-w-7xl mx-auto px-5 md:px-8 h-20 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <span class="w-11 h-11 rounded-full bg-forest text-cream flex items-center justify-center font-serif text-lg">G&S</span>
+        <span class="leading-tight">
+          <span class="block font-serif text-lg text-forest">Gajadhar & Son</span>
+          <span class="block text-[11px] tracking-wide text-gold-600">Premium Tea</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink">
+        <li><a href="#home" class="nav-link hover:text-leaf transition-colors">Home</a></li>
+        <li><a href="#about" class="nav-link hover:text-leaf transition-colors">About</a></li>
+        <li><a href="#products" class="nav-link hover:text-leaf transition-colors">Products</a></li>
+        <li><a href="#quality" class="nav-link hover:text-leaf transition-colors">Quality</a></li>
+        <li><a href="#process" class="nav-link hover:text-leaf transition-colors">Our Process</a></li>
+        <li><a href="#contact" class="nav-link hover:text-leaf transition-colors">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/916367154928" target="_blank" rel="noopener" class="hidden sm:inline-flex items-center gap-2 bg-leaf hover:bg-leaf-600 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition-colors">
+          <i class="fa-solid fa-mug-hot"></i> Order / Enquiry
+        </a>
+        <button id="menuBtn" aria-label="Open menu" class="lg:hidden w-10 h-10 grid place-items-center rounded-full border border-forest/20 text-forest">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </nav>
+  </div>
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-cream-200 border-b border-leaf-100 px-5 pb-6 pt-2">
+    <ul class="flex flex-col gap-1 text-ink font-medium">
+      <li><a href="#home" class="mlink block py-2.5 border-b border-forest/10">Home</a></li>
+      <li><a href="#about" class="mlink block py-2.5 border-b border-forest/10">About</a></li>
+      <li><a href="#products" class="mlink block py-2.5 border-b border-forest/10">Products</a></li>
+      <li><a href="#quality" class="mlink block py-2.5 border-b border-forest/10">Quality</a></li>
+      <li><a href="#process" class="mlink block py-2.5 border-b border-forest/10">Our Process</a></li>
+      <li><a href="#contact" class="mlink block py-2.5">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/916367154928" target="_blank" rel="noopener" class="mt-4 inline-flex w-full justify-center items-center gap-2 bg-leaf text-white font-semibold px-5 py-3 rounded-full">
+      <i class="fa-solid fa-mug-hot"></i> Order / Enquiry
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative pt-20 bg-forest text-cream overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.15] pointer-events-none" style="background:radial-gradient(circle at 80% 20%, #B8863B, transparent 55%);"></div>
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-12 items-center py-20 lg:py-28 relative">
+    <div class="reveal">
+      <p class="text-gold font-medium tracking-wide mb-4"><i class="fa-solid fa-leaf mr-2"></i>Rajasthan, India</p>
+      <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6">The Perfect Taste in Every Cup</h1>
+      <p class="text-cream/80 text-lg max-w-md mb-9">Gajadhar & Son — quality tea, rich aroma and authentic taste for every tea lover.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="#products" class="bg-gold hover:bg-gold-600 text-forest font-semibold px-7 py-3.5 rounded-full transition-colors">Explore Our Tea</a>
+        <a href="https://wa.me/916367154928" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-cream/40 hover:border-cream text-cream px-7 py-3.5 rounded-full transition-colors">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Enquiry
+        </a>
+      </div>
+    </div>
+    <div class="relative reveal hidden lg:block">
+      <div class="w-full aspect-square rounded-[3rem] bg-leaf-600/40 border border-gold/30 flex items-center justify-center">
+        <i class="fa-solid fa-mug-saucer text-[11rem] text-gold/90"></i>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-cream text-forest rounded-2xl shadow-xl px-6 py-4">
+        <p class="font-serif text-2xl">100%</p>
+        <p class="text-xs text-ink/70">Quality Focused</p>
+      </div>
+    </div>
+  </div>
+  <div class="leaf-divider text-cream">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path fill="currentColor" d="M0 40 Q 360 0 720 30 T 1440 20 V60 H0 Z"/></svg>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="bg-cream-200 py-20 md:py-28">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal order-2 lg:order-1">
+      <div class="aspect-[4/5] rounded-3xl bg-leaf-100 border border-leaf/20 flex items-center justify-center">
+        <i class="fa-solid fa-seedling text-[8rem] text-leaf"></i>
+      </div>
+    </div>
+    <div class="reveal order-1 lg:order-2">
+      <p class="text-gold-600 font-medium mb-3">Who We Are</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest mb-6">About Gajadhar & Son</h2>
+      <p class="text-ink/80 leading-relaxed mb-4">Gajadhar & Son Company is a Rajasthan-based tea business dedicated to bringing genuine taste and freshness to every cup. We focus on careful selection, honest sourcing and consistent quality, so every pack of tea that leaves our hands feels worth the trust placed in it.</p>
+      <p class="text-ink/80 leading-relaxed mb-8">From strong Assam blends to light green tea, our goal stays simple — a cup that tastes right, every single time.</p>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-leaf-100"><i class="fa-solid fa-award text-leaf text-xl mb-2"></i><p class="font-semibold text-forest text-sm">Premium Quality</p></div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-leaf-100"><i class="fa-solid fa-leaf text-leaf text-xl mb-2"></i><p class="font-semibold text-forest text-sm">Fresh Tea</p></div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-leaf-100"><i class="fa-solid fa-wind text-leaf text-xl mb-2"></i><p class="font-semibold text-forest text-sm">Rich Aroma</p></div>
+        <div class="bg-white rounded-2xl p-5 shadow-sm border border-leaf-100"><i class="fa-solid fa-handshake text-leaf text-xl mb-2"></i><p class="font-semibold text-forest text-sm">Customer Trust</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section id="products" class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-xl mx-auto mb-14 reveal">
+      <p class="text-gold-600 font-medium mb-3">Our Tea Collection</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest">Blends Made for Every Mood</h2>
+    </div>
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-20 md:py-28 bg-leaf-100">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-xl mx-auto mb-14 reveal">
+      <p class="text-gold-600 font-medium mb-3">Why Gajadhar & Son</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest">Why Choose Us</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-leaf text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Quality Ingredients</h3><p class="text-ink/70 text-sm">Carefully selected tea leaves for a dependable cup.</p></div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-seedling text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Freshness</h3><p class="text-ink/70 text-sm">Fresh, aromatic tea products handled with care.</p></div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-mug-hot text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Rich Taste</h3><p class="text-ink/70 text-sm">A satisfying, full-bodied taste in every cup.</p></div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-box text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Quality Packaging</h3><p class="text-ink/70 text-sm">Clean, attractive packaging that keeps tea fresh.</p></div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-handshake text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Trusted Service</h3><p class="text-ink/70 text-sm">Customer-focused service you can rely on.</p></div>
+      <div class="bg-white rounded-2xl p-7 shadow-sm reveal"><i class="fa-solid fa-star text-2xl text-leaf mb-4"></i><h3 class="font-serif text-lg text-forest mb-2">Premium Experience</h3><p class="text-ink/70 text-sm">Tea made for everyday enjoyment, cup after cup.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="py-20 md:py-28 bg-cream-200">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-xl mx-auto mb-16 reveal">
+      <p class="text-gold-600 font-medium mb-3">From Leaf to Cup</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest">Our Tea Journey</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 md:gap-4 relative">
+      <div class="hidden md:block absolute top-8 left-[8%] right-[8%] h-px step-line"></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-forest text-cream flex items-center justify-center relative z-10"><i class="fa-solid fa-leaf"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">01</p><p class="font-medium text-forest text-sm">Tea Selection</p></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-forest text-cream flex items-center justify-center relative z-10"><i class="fa-solid fa-magnifying-glass"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">02</p><p class="font-medium text-forest text-sm">Quality Checking</p></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-forest text-cream flex items-center justify-center relative z-10"><i class="fa-solid fa-gears"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">03</p><p class="font-medium text-forest text-sm">Processing</p></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-forest text-cream flex items-center justify-center relative z-10"><i class="fa-solid fa-flask"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">04</p><p class="font-medium text-forest text-sm">Blending</p></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-forest text-cream flex items-center justify-center relative z-10"><i class="fa-solid fa-box-open"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">05</p><p class="font-medium text-forest text-sm">Packaging</p></div>
+      <div class="text-center reveal"><div class="w-16 h-16 mx-auto rounded-full bg-gold text-forest flex items-center justify-center relative z-10"><i class="fa-solid fa-mug-hot"></i></div><p class="mt-4 text-xs text-gold-600 font-semibold">06</p><p class="font-medium text-forest text-sm">Your Perfect Cup</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUALITY ============ -->
+<section id="quality" class="py-20 md:py-28 bg-forest text-cream">
+  <div class="max-w-5xl mx-auto px-5 md:px-8 text-center">
+    <p class="text-gold font-medium mb-3 reveal">Our Promise</p>
+    <h2 class="font-serif text-3xl sm:text-4xl mb-6 reveal">Quality You Can Taste</h2>
+    <p class="text-cream/75 max-w-2xl mx-auto mb-14 reveal">Every cup begins with carefully selected tea and attention to freshness, aroma and consistent quality.</p>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="border border-cream/15 rounded-2xl p-8 reveal"><i class="fa-solid fa-droplet text-gold text-2xl mb-4"></i><p class="font-serif text-lg mb-2">Freshness</p><p class="text-cream/70 text-sm">Handled and stored to preserve every leaf's character.</p></div>
+      <div class="border border-cream/15 rounded-2xl p-8 reveal"><i class="fa-solid fa-wind text-gold text-2xl mb-4"></i><p class="font-serif text-lg mb-2">Aroma</p><p class="text-cream/70 text-sm">A fragrance that fills the room before the first sip.</p></div>
+      <div class="border border-cream/15 rounded-2xl p-8 reveal"><i class="fa-solid fa-circle-check text-gold text-2xl mb-4"></i><p class="font-serif text-lg mb-2">Consistent Taste</p><p class="text-cream/70 text-sm">The same reliable flavour, pack after pack.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENQUIRY FORM ============ -->
+<section id="enquiry" class="py-20 md:py-28 bg-cream-200">
+  <div class="max-w-3xl mx-auto px-5 md:px-8">
+    <div class="text-center mb-12 reveal">
+      <p class="text-gold-600 font-medium mb-3">Get In Touch</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest">Business Enquiry</h2>
+    </div>
+    <form id="enquiryForm" class="bg-white rounded-3xl shadow-sm p-6 sm:p-10 grid sm:grid-cols-2 gap-5 reveal">
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Name *</label>
+        <input required name="name" type="text" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="Your name">
+      </div>
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Mobile Number *</label>
+        <input required name="mobile" type="tel" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="10-digit mobile number">
+      </div>
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Business Name</label>
+        <input name="business" type="text" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="Shop / business name">
+      </div>
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Email</label>
+        <input name="email" type="email" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="you@example.com">
+      </div>
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Select Product</label>
+        <select name="product" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf">
+          <option>Premium Assam Tea</option><option>Darjeeling Tea</option><option>Masala Tea</option>
+          <option>Ginger Tea</option><option>Green Tea</option><option>Premium Family Tea</option>
+        </select>
+      </div>
+      <div class="sm:col-span-1">
+        <label class="block text-sm font-medium text-ink mb-1.5">Quantity</label>
+        <input name="quantity" type="text" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="e.g. 50 kg / 100 packs">
+      </div>
+      <div class="sm:col-span-2">
+        <label class="block text-sm font-medium text-ink mb-1.5">Message</label>
+        <textarea name="message" rows="4" class="w-full rounded-xl border border-leaf-100 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-leaf" placeholder="Tell us what you need"></textarea>
+      </div>
+      <p id="formError" class="sm:col-span-2 text-sm text-red-600 hidden">Please fill in your name and a valid 10-digit mobile number.</p>
+      <div class="sm:col-span-2">
+        <button type="submit" class="w-full inline-flex justify-center items-center gap-2 bg-leaf hover:bg-leaf-600 text-white font-semibold px-7 py-3.5 rounded-full transition-colors">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Send Enquiry on WhatsApp
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="text-center max-w-xl mx-auto mb-14 reveal">
+      <p class="text-gold-600 font-medium mb-3">What People Say</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest">Customer Testimonials</h2>
+      <p class="text-xs text-ink/40 mt-2">(Sample placeholder reviews — replace with real customer feedback)</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-7">
+      <div class="bg-leaf-100 rounded-2xl p-7 reveal"><i class="fa-solid fa-quote-left text-gold text-xl mb-4"></i><p class="text-ink/80 text-sm mb-6">"The Masala Tea has become a daily habit at our shop — customers keep asking where we source it from."</p><p class="font-semibold text-forest text-sm">Ramesh Sharma</p><p class="text-xs text-ink/50">Shop Owner, Ajmer</p></div>
+      <div class="bg-leaf-100 rounded-2xl p-7 reveal"><i class="fa-solid fa-quote-left text-gold text-xl mb-4"></i><p class="text-ink/80 text-sm mb-6">"Consistent quality every single order. The Assam blend has great strength and aroma."</p><p class="font-semibold text-forest text-sm">Priya Agarwal</p><p class="text-xs text-ink/50">Retailer, Jaipur</p></div>
+      <div class="bg-leaf-100 rounded-2xl p-7 reveal"><i class="fa-solid fa-quote-left text-gold text-xl mb-4"></i><p class="text-ink/80 text-sm mb-6">"Quick WhatsApp response and reliable delivery — exactly what a small business needs."</p><p class="font-semibold text-forest text-sm">Vikram Singh</p><p class="text-xs text-ink/50">Distributor, Udaipur</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-20 md:py-28 bg-leaf-100">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-10">
+    <div class="reveal">
+      <p class="text-gold-600 font-medium mb-3">Reach Us</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-forest mb-6">Gajadhar & Son Company</h2>
+      <ul class="space-y-4 text-ink/80 mb-8">
+        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-leaf"></i> Rajasthan, India</li>
+        <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-leaf"></i> +91 63671 54928</li>
+        <li class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-leaf"></i> WhatsApp: +91 63671 54928</li>
+        <li class="flex items-center gap-3"><i class="fa-solid fa-clock text-leaf"></i> Mon – Sat, 9:00 AM – 7:00 PM</li>
+      </ul>
+      <div class="flex flex-wrap gap-4">
+        <a href="tel:+916367154928" class="inline-flex items-center gap-2 bg-forest text-cream font-semibold px-6 py-3 rounded-full"><i class="fa-solid fa-phone"></i> Call Now</a>
+        <a href="https://wa.me/916367154928" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-leaf text-white font-semibold px-6 py-3 rounded-full"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="reveal rounded-3xl overflow-hidden border border-leaf/20 bg-white min-h-[280px] flex items-center justify-center text-center p-8">
+      <div>
+        <i class="fa-solid fa-map-location-dot text-4xl text-leaf mb-3"></i>
+        <p class="text-ink/60 text-sm">Map placeholder — embed your exact Google Maps location here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-forest text-cream/80 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+    <div>
+      <p class="font-serif text-xl text-cream mb-2">Gajadhar & Son</p>
+      <p class="text-sm">Premium Tea • Rich Taste • Trusted Quality</p>
+    </div>
+    <div>
+      <p class="text-cream font-semibold mb-3 text-sm">Quick Links</p>
+      <ul class="space-y-2 text-sm">
+        <li><a href="#home" class="hover:text-gold">Home</a></li>
+        <li><a href="#about" class="hover:text-gold">About</a></li>
+        <li><a href="#products" class="hover:text-gold">Products</a></li>
+        <li><a href="#quality" class="hover:text-gold">Quality</a></li>
+        <li><a href="#contact" class="hover:text-gold">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-cream font-semibold mb-3 text-sm">Contact</p>
+      <p class="text-sm mb-1"><i class="fa-solid fa-phone mr-2"></i>+91 63671 54928</p>
+      <p class="text-sm"><i class="fa-solid fa-location-dot mr-2"></i>Rajasthan, India</p>
+    </div>
+    <div>
+      <p class="text-cream font-semibold mb-3 text-sm">Follow Us</p>
+      <div class="flex gap-3">
+        <a href="#" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:text-forest transition-colors"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:text-forest transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+        <a href="https://wa.me/916367154928" class="w-9 h-9 rounded-full border border-cream/20 grid place-items-center hover:bg-gold hover:text-forest transition-colors"><i class="fa-brands fa-whatsapp text-xs"></i></a>
+      </div>
+    </div>
+  </div>
+  <p class="text-center text-xs text-cream/50 border-t border-cream/10 pt-6">© 2026 Gajadhar & Son Company. All Rights Reserved.</p>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP + BACK TO TOP ============ -->
+<div class="fixed z-40 right-5 flex flex-col items-end gap-3" style="bottom:calc(1.25rem + env(safe-area-inset-bottom,0px))">
+  <button id="topBtn" aria-label="Back to top" class="hidden w-11 h-11 rounded-full bg-forest text-cream shadow-lg grid place-items-center">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <a href="https://wa.me/916367154928" target="_blank" rel="noopener" title="Chat with Gajadhar & Son" class="relative w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg grid place-items-center">
+    <span class="pulse-dot absolute inset-0 rounded-full"></span>
+    <i class="fa-brands fa-whatsapp text-2xl relative"></i>
+  </a>
+</div>
+
+<script>
+  // ---- Product data & rendering ----
+  const products = [
+    {name:'Premium Assam Tea', desc:'Rich taste and strong aroma.', icon:'fa-mug-hot'},
+    {name:'Darjeeling Tea', desc:'Refreshing and aromatic tea.', icon:'fa-leaf'},
+    {name:'Masala Tea', desc:'Traditional Indian spices with rich tea flavor.', icon:'fa-fire'},
+    {name:'Ginger Tea', desc:'Refreshing tea with natural ginger flavor.', icon:'fa-seedling'},
+    {name:'Green Tea', desc:'Light and refreshing tea.', icon:'fa-spa'},
+    {name:'Premium Family Tea', desc:'Balanced taste for everyday enjoyment.', icon:'fa-mug-saucer'},
+  ];
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = products.map(p => `
+    <div class="group bg-cream-200 rounded-3xl p-7 border border-leaf-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <div class="w-full aspect-[4/3] rounded-2xl bg-leaf-100 flex items-center justify-center mb-5 group-hover:bg-leaf/10 transition-colors">
+        <i class="fa-solid ${p.icon} text-5xl text-leaf"></i>
+      </div>
+      <h3 class="font-serif text-xl text-forest mb-1.5">${p.name}</h3>
+      <p class="text-ink/70 text-sm mb-5">${p.desc}</p>
+      <div class="flex items-center gap-3">
+        <button onclick="openDetails('${p.name.replace(/'/g,"\\'")}','${p.desc.replace(/'/g,"\\'")}')" class="text-sm font-semibold text-forest border border-forest/20 rounded-full px-4 py-2 hover:bg-forest hover:text-cream transition-colors">View Details</button>
+        <a href="https://wa.me/916367154928?text=${encodeURIComponent('Hello Gajadhar & Son, I am interested in your '+p.name+'. Please share details.')}" target="_blank" rel="noopener" class="text-sm font-semibold text-white bg-leaf rounded-full px-4 py-2 hover:bg-leaf-600 transition-colors">Enquire on WhatsApp</a>
+      </div>
+    </div>`).join('');
+
+  // ---- Product details modal ----
+  const modalRoot = document.createElement('div');
+  modalRoot.id = 'productModal';
+  modalRoot.className = 'fixed inset-0 z-50 hidden items-center justify-center p-5';
+  modalRoot.innerHTML = `
+    <div class="absolute inset-0 bg-forest/60 backdrop-blur-sm" onclick="closeDetails()"></div>
+    <div class="relative bg-white rounded-3xl p-8 max-w-sm w-full">
+      <button onclick="closeDetails()" class="absolute top-4 right-4 text-ink/50 hover:text-ink"><i class="fa-solid fa-xmark text-lg"></i></button>
+      <h3 id="modalTitle" class="font-serif text-2xl text-forest mb-3"></h3>
+      <p id="modalDesc" class="text-ink/70 mb-6"></p>
+      <a id="modalWa" target="_blank" rel="noopener" class="inline-flex w-full justify-center items-center gap-2 bg-leaf text-white font-semibold px-6 py-3 rounded-full"><i class="fa-brands fa-whatsapp"></i> Enquire on WhatsApp</a>
+    </div>`;
+  document.body.appendChild(modalRoot);
+  function openDetails(name, desc){
+    document.getElementById('modalTitle').textContent = name;
+    document.getElementById('modalDesc').textContent = desc;
+    document.getElementById('modalWa').href = 'https://wa.me/916367154928?text=' + encodeURIComponent('Hello Gajadhar & Son, I am interested in your '+name+'. Please share details.');
+    modalRoot.classList.remove('hidden'); modalRoot.classList.add('flex');
+  }
+  function closeDetails(){ modalRoot.classList.add('hidden'); modalRoot.classList.remove('flex'); }
+
+  // ---- Mobile menu ----
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+  // ---- Active nav link on scroll ----
+  const sections = ['home','about','products','quality','process','contact'].map(id => document.getElementById(id)).filter(Boolean);
+  const navLinks = document.querySelectorAll('.nav-link');
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        navLinks.forEach(l => l.classList.remove('text-leaf'));
+        const link = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        if(link) link.classList.add('text-leaf');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  sections.forEach(s => spy.observe(s));
+
+  // ---- Scroll reveal ----
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ---- Back to top ----
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    topBtn.classList.toggle('hidden', window.scrollY < 500);
+  });
+  topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  // ---- Enquiry form -> WhatsApp ----
+  document.getElementById('enquiryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const f = new FormData(this);
+    const name = (f.get('name')||'').trim();
+    const mobile = (f.get('mobile')||'').trim();
+    const errorEl = document.getElementById('formError');
+    if(!name || !/^\d{10}$/.test(mobile.replace(/\D/g,''))){
+      errorEl.classList.remove('hidden');
+      return;
+    }
+    errorEl.classList.add('hidden');
+    const lines = [
+      'Hello Gajadhar & Son, I am interested in your tea products. Please share product and pricing details.',
+      `Name: ${name}`,
+      `Mobile: ${mobile}`,
+      f.get('business') ? `Business: ${f.get('business')}` : null,
+      f.get('email') ? `Email: ${f.get('email')}` : null,
+      `Product: ${f.get('product')}`,
+      f.get('quantity') ? `Quantity: ${f.get('quantity')}` : null,
+      f.get('message') ? `Message: ${f.get('message')}` : null,
+    ].filter(Boolean).join('\n');
+    window.open('https://wa.me/916367154928?text=' + encodeURIComponent(lines), '_blank');
+  });
+</script>
+</body>
+</html>
